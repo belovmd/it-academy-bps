@@ -4,7 +4,7 @@ import itertools
 import random
 import re
 import sys
-import xml.etree.ElementTree as etree
+import xml.etree.ElementTree as eTree
 from itertools import groupby
 from time import localtime
 
@@ -28,8 +28,8 @@ while babies < 100:
 
 
 # 5 lines: Functions
-def greet(name):
-    print('Hello', name)
+def greet(nam):
+    print('Hello', nam)
 
 
 greet('Jack')
@@ -37,7 +37,7 @@ greet('Jill')
 greet('Bob')
 
 # 6 lines: Import, regular expressions
-for test_string in ['555-1212', 'ILL-EGAL']:
+for test_string in ['555-1212', 'ILLEGAL']:
     if re.match(r'^\d{3}-\d{4}$', test_string):
         print(test_string, 'is a valid US local phone number')
     else:
@@ -125,10 +125,10 @@ print(my_account.balance, my_account.overdrawn())
 
 # 14 lines: Doctest-based testing
 def median(pool):
-    '''Statistical median to demonstrate doctest.
+    """Statistical median to demonstrate doctest.
     >>> median([2, 9, 9, 7, 9, 2, 4, 5, 8])
     6 #change to 7 in order to pass the test
-    '''
+    """
     copy = sorted(pool)
     size = len(copy)
     if size % 2 == 1:
@@ -149,7 +149,7 @@ first paragraph.
 
 This is the second.
 '''.splitlines()
-# Use itertools.groupby and bool to return groups of
+# Use itertools.group by and bool to return groups of
 # consecutive lines that either have content or don't.
 for has_chars, frags in groupby(lines, bool):
     if has_chars:
@@ -169,8 +169,8 @@ def cmp(a, b):
 with open('stocks.csv', 'w', newline='') as stocksFileW:
     writer = csv.writer(stocksFileW)
     writer.writerows([
-        ['GOOG', 'Google, Inc.', 505.24, 0.47, 0.09],
-        ['YHOO', 'Yahoo! Inc.', 27.38, 0.33, 1.22],
+        ['GOOD', 'Google, Inc.', 505.24, 0.47, 0.09],
+        ['YHoOO', 'Yahoo! Inc.', 27.38, 0.33, 1.22],
         ['CNET', 'CNET Networks, Inc.', 8.62, -0.13, -1.4901]
     ])
 
@@ -187,10 +187,10 @@ BOARD_SIZE = 8
 
 
 # 18 lines: 8-Queens Problem (recursion)
-def under_attack(col, queens):
+def under_attack(col, queen):
     left = right = col
 
-    for r, c in reversed(queens):
+    for r, c in reversed(queen):
         left, right = left - 1, right + 1
 
         if c in (left, col, right):
@@ -204,10 +204,10 @@ def solve(n):
 
     smaller_solutions = solve(n - 1)
 
-    return [solution + [(n, i + 1)]
-            for i in range(BOARD_SIZE)
+    return [solution + [(n, j + 1)]
+            for j in range(BOARD_SIZE)
             for solution in smaller_solutions
-            if not under_attack(i + 1, solution)]
+            if not under_attack(j + 1, solution)]
 
 
 for answer in solve(BOARD_SIZE):
@@ -246,14 +246,14 @@ dinner_recipe = '''<html><body><table>
 
 # From http://effbot.org/zone/element-index.htm
 
-tree = etree.fromstring(dinner_recipe)
+tree = eTree.fromstring(dinner_recipe)
 
 # For invalid HTML use http://effbot.org/zone/element-soup.htm
 # import ElementSoup, StringIO
 # tree = ElementSoup.parse(StringIO.StringIO(dinner_recipe))
 
-pantry = set(['olive oil', 'pesto'])
-for ingredient in tree.getiterator('tr'):
+pantry = {'olive oil', 'pesto'}
+for ingredient in tree.iter('tr'):
     amt, unit, item = ingredient
     if item.tag == "td" and item.text not in pantry:
         print("%s: %s %s" % (item.text, amt.text, unit.text))
@@ -266,17 +266,17 @@ class BailOut(Exception):
     pass
 
 
-def validate(queens):
-    left = right = col = queens[-1]
-    for r in reversed(queens[:-1]):
+def validate(queen):
+    left = right = col = queen[-1]
+    for r in reversed(queen[:-1]):
         left, right = left - 1, right + 1
         if r in (left, col, right):
             raise BailOut
 
 
-def add_queen(queens):
-    for i in range(BOARD_SIZE):
-        test_queens = queens + [i]
+def add_queen(queen):
+    for k in range(BOARD_SIZE):
+        test_queens = queen + [k]
         try:
             validate(test_queens)
             if len(test_queens) == BOARD_SIZE:
@@ -315,7 +315,7 @@ while guesses_made < 6:
     if guess == number:
         break
 
-if guess == number:
-    print('Good job, {0}! You guessed my number in {1} guesses!'.format(name, guesses_made))
+    if guess == number:
+        print('Good job, {0}! You guessed my number in {1} guesses!'.format(name, guesses_made))
 else:
     print('Nope. The number I was thinking of was {0}'.format(number))
