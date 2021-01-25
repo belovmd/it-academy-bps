@@ -8,3 +8,9 @@ for i, name in enumerate(friends):
             print(test_string, 'is a valid US local phone number')
         else:
             print(test_string, 'rejected')
+def greet(name):
+    print ('Hello', name)
+
+greet('Jack')
+greet('Jill')
+greet('Bob')
