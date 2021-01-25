@@ -171,7 +171,7 @@ with open('stocks.csv', 'w', newline='') as stocksFileW:
     writer.writerows([
         ['GOOD', 'Google, Inc.', 505.24, 0.47, 0.09],
         ['YHoOO', 'Yahoo! Inc.', 27.38, 0.33, 1.22],
-        ['CNET', 'CNET Networks, Inc.', 8.62, -0.13, -1.4901]
+        ['NET', 'NET Networks, Inc.', 8.62, -0.13, -1.4901]
     ])
 
 # read stocks data, print status messages
