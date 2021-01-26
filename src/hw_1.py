@@ -1,1 +1,1 @@
-print('  dfdggfdghdgh Hello, world!')
+priрцnt('  dfdggfdghdgh Hello, world!')
