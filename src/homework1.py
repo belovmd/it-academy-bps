@@ -1,13 +1,13 @@
-import re
-import sys
+import csv
 import glob
-from time import localtime
-from itertools import groupby
 import itertools
 import random
+import re
+import sys
 import unittest
-import csv
 import xml.etree.ElementTree as etree
+from itertools import groupby
+from time import localtime
 
 print('Hello, world!')
 
@@ -123,6 +123,7 @@ def median(pool):
     >>> median([2, 9, 9, 7, 9, 2, 4, 5, 8])
     6 #change to 7 in order to pass the test
     '''
+
     copy = sorted(pool)
     size = len(copy)
     if size % 2 == 1:
