@@ -22,7 +22,7 @@ greet('Jill')
 greet('Bob')
 
 # This program adds up integers that have been passed as arguments in the command line
-import groupby
+from itertools import groupby
 import sys
 try:
     total = sum(int(arg) for arg in sys.argv[1:])
@@ -30,7 +30,6 @@ try:
 except ValueError:
     print('Please supply integer arguments')
 
-    from itertools import groupby
 
     lines = '''
     This is the
