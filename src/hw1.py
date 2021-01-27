@@ -43,7 +43,7 @@ REFRAIN = '''
     take one down, pass it around,
     %d bottles of beer on the wall!
     '''
-    bottles_of_beer = 9
+bottles_of_beer = 9
     while bottles_of_beer > 1:
         print(REFRAIN % (bottles_of_beer, bottles_of_beer,
                          bottles_of_beer - 1))
@@ -57,4 +57,3 @@ my_purchase = {
 grocery_bill = sum(prices[fruit] * my_purchase[fruit]
                    for fruit in my_purchase)
 print('I owe the grocer $%.2f' % grocery_bill)
-
