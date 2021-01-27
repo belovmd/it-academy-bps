@@ -1,9 +1,9 @@
 from itertools import groupby
 
-lines='''
+lines = '''
     This is the
+    
     first paragraph.
-
     This is the second.
     '''.splitlines()
 # Use itertools.groupby and bool to return groups of
@@ -37,7 +37,7 @@ greet('Jack')
 greet('Jill')
 greet('Bob')
 
-    REFRAIN = '''
+REFRAIN = '''
     %d bottles of beer on the wall,
     %d bottles of beer,
     take one down, pass it around,
