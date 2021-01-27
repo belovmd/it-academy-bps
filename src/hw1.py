@@ -46,8 +46,8 @@ REFRAIN = '''
 bottles_of_beer = 9
 while bottles_of_beer > 1:
     print(REFRAIN % (bottles_of_beer, bottles_of_beer,
-                         bottles_of_beer - 1))
-        bottles_of_beer -= 1
+                     bottles_of_beer - 1))
+bottles_of_beer -= 1
 
 
 prices = {'apple': 0.40, 'banana': 0.50}
