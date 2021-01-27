@@ -1,3 +1,19 @@
+from itertools import groupby
+
+lines='''
+    This is the
+    first paragraph.
+
+    This is the second.
+    '''.splitlines()
+# Use itertools.groupby and bool to return groups of
+# consecutive lines that either have content or don't.
+for has_chars, frags in groupby(lines, bool):
+    if has_chars:
+        print(' '.join(frags))
+# PRINTS:
+# This is the first paragraph.
+# This is the second.
 print('Hello, world!')
 
 parents, babies = (1, 1)
@@ -20,23 +36,6 @@ def greet(name):
 greet('Jack')
 greet('Jill')
 greet('Bob')
-
-
-from itertools import groupby
-    lines = '''
-    This is the
-    first paragraph.
-
-    This is the second.
-    '''.splitlines()
-    # Use itertools.groupby and bool to return groups of
-    # consecutive lines that either have content or don't.
-    for has_chars, frags in groupby(lines, bool):
-        if has_chars:
-            print(' '.join(frags))
-    # PRINTS:
-    # This is the first paragraph.
-    # This is the second.
 
     REFRAIN = '''
     %d bottles of beer on the wall,
