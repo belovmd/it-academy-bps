@@ -2,8 +2,8 @@ print('Hello, world!')
 
 parents, babies = (1, 1)
 while babies < 100:
-    print ('This generation has {0} babies'.format(babies))
-    parents, babies=(babies, parents + babies)
+    print('This generation has {0} babies'.format(babies))
+    parents, babies = (babies, parents + babies)
 
 friends = ['john', 'pat', 'gary', 'michael']
 for i, name in enumerate(friends):
@@ -12,8 +12,10 @@ for i, name in enumerate(friends):
 name = input('What is your name?\n')
 print('Hi, %s.' % name)
 
+
 def greet(name):
     print('Hello', name)
+
 
 greet('Jack')
 greet('Jill')
