@@ -3,8 +3,8 @@ print('Hello, world!')
 
 
 # 2 lines: Input, assignment
-User_name = input('What is your name?\n')
-print('Hi, %s.' % User_name)
+user_name = input('What is your name?\n')
+print('Hi, %s.' % user_name)
 
 
 # 3 lines: For loop, built-in enumerate function, new style formatting
