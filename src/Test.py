@@ -2,11 +2,6 @@
 print('Hello, world!')
 
 
-# 2 lines: Input, assignment
-username = input('What is your name? ')
-print('Hi, %s.' % username)
-
-
 # 3 lines: For loop, built-in enumerate function, new style formatting
 friends = ['john', 'pat', 'gary', 'michael']
 for i, name in enumerate(friends):
