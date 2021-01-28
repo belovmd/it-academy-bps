@@ -47,3 +47,20 @@ print(max3(45, 3, 54))
 str1 = "mn3" * 3 + "\n"
 str2 = "fdc" * 4 + "\n"
 print(str1 + str2)
+
+
+def prime_num(n):
+    sieve = list(range(n * n + 1))
+    sieve[1] = 0
+    for count in sieve:
+        if count > 1:
+            for j in range(count + count, len(sieve), count):
+                sieve[j] = 0
+    sieve = [x for x in sieve if x != 0]
+    c = 1
+    for count in range(n):
+        c *= sieve[count]
+    return c
+
+
+print(prime_num(6))
