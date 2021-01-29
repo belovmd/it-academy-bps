@@ -58,7 +58,8 @@ def prime_num(n):
                 sieve[j] = 0
     sieve = [x for x in sieve if x != 0]
     c = 1
-    for count in range(n):
+    for count in \
+            range(n):
         c *= sieve[count]
     return c
 
