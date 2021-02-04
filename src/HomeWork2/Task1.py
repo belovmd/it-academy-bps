@@ -1,4 +1,5 @@
-""" 1. Напишите программу, которая считает общую цену. Вводится M рублей и N копеек цена, а также количество S товара
+""" 1. Напишите программу, которая считает общую цену.
+Вводится M рублей и N копеек цена, а также количество S товара
 Посчитайте общую цену в рублях и копейках за L товаров.
 Пример:
 Input: Цена одной вещи 3 рубля 20 копеек, посчитать 3 предмета.
@@ -9,4 +10,3 @@ count_product = int(input('Count Product:'))
 print('Amount to pay = {}'.format(price_rub * count_product + price_kop / 100 * count_product))
 amount = price_rub * count_product + price_kop / 100 * count_product
 print('Amount to pay = {} Rub. {} Kop'.format(int(amount // 1), int(amount % 1 * 100)))
-
