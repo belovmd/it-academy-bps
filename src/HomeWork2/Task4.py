@@ -6,7 +6,7 @@ input_str = "asdЛЛdfддjjv cfFfcc ffжжkSskf fkfjgdd. slk. ffjg"
 count_upper = 0
 count_small = 0
 for char in input_str:
-    if ord(char) in range(ord('A'), ord('z')+1):
+    if ord(char) in range(ord('A'), ord('z') + 1):
         if char.isupper():
             count_upper += 1
         else:
