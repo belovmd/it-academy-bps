@@ -9,8 +9,8 @@ import re
 
 def output_amount(list_nums):  # for V_1, V_2 DRY
     if len(list_nums) >= 3:
-        res_amount = list_nums[0] * list_nums[2] + list_nums[1] / 100 * list_nums[2]
-        print('Amount to pay = {} Rub. {} Kop'.format(int(res_amount // 1), int(res_amount % 1 * 100)))
+        res_am = list_nums[0] * list_nums[2] + list_nums[1] / 100 * list_nums[2]
+        print('Amount to pay = {} Rub. {} Kop'.format(int(res_am // 1), int(res_am % 1 * 100)))
     else:
         print('Incorrect Input')
 
