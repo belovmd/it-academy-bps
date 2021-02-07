@@ -12,14 +12,8 @@ for i, name in enumerate(friends):
     print("iteration {iteration} is {name}".format(iteration=i, name=name))
 
 # test 5
-def greet(name):
-
-
-    print('Hello', name)
-
-greet('Jack')
-greet('Jill')
-greet('Bob')
+name = 'Jack'
+print('Hello, %s.' % name)
 
 # test 6
 parents, babies = (1, 1)
