@@ -14,6 +14,7 @@ for i, name in enumerate(friends):
 # test 5
 def greet(name):
 
+
     print('Hello', name)
 
 greet('Jack')
