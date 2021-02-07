@@ -14,7 +14,6 @@ for i, name in enumerate(friends):
 # test 5
 def greet(name):
 
-
     print('Hello', name)
 
 greet('Jack')
@@ -35,13 +34,3 @@ my_purchase = {
 grocery_bill = sum(prices[fruit] * my_purchase[fruit]
                    for fruit in my_purchase)
 print('I owe the grocer $%.2f' % grocery_bill)
-
-# test 8
-def max(a, b):
-
-
-    if a > b:
-        return a
-    else:
-        return b
-print(max(5, 3))
