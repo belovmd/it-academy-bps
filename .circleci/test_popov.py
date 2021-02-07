@@ -13,6 +13,7 @@ for i, name in enumerate(friends):
 
 # test 5
 def greet(name):
+
     print('Hello', name)
 
 greet('Jack')
@@ -36,6 +37,7 @@ print('I owe the grocer $%.2f' % grocery_bill)
 
 # test 8
 def max(a, b):
+
     if a > b:
         return a
     else:
