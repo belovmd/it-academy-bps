@@ -18,6 +18,7 @@ def reverse_words(text):
     d = ' '.join(c)
     return d
 
+
 """Build Tower by the following given argument:
 number of floors (integer and always greater than 0)."""
 
@@ -30,17 +31,6 @@ def tower_builder(n_floors):
         floors.append(' ' * n + '*' * (i * 2 + 1) + ' ' * n)
     return floors
 
-def get_sum(a,b):
-    if b > a:
-        c = [int(i) for i in range(a,b+1)]
-        get_sum = sum(c)
-        return get_sum
-    elif a > b:
-        c = [int(i) for i in range(b,a+1)]
-        get_sum = sum(c)
-        return get_sum
-    elif a == b:
-        return a
 
 """Take 2 strings s1 and s2 including only letters from ato z. Return a new sorted string, the longest possible,
 containing distinct letters - each taken only once - coming from s1 or s2."""
@@ -57,6 +47,7 @@ def longest(s1, s2):
     new_5 = ''.join(new_4)
     return new_5
 
+
 """Given two integers a and b, which can be positive or negative,
 find the sum of all the integers between including them too and return it.
 If the two numbers are equal return a or b."""
@@ -64,15 +55,16 @@ If the two numbers are equal return a or b."""
 
 def get_sum(a,b):
     if b > a:
-        c = [int(i) for i in range(a,b+1)]
+        c = [int(i) for i in range(a,b + 1)]
         get_sum = sum(c)
         return get_sum
     elif a > b:
-        c = [int(i) for i in range(b,a+1)]
+        c = [int(i) for i in range(b,a + 1)]
         get_sum = sum(c)
         return get_sum
     elif a == b:
         return a
+
 
 """Write simple .camelCase method (camel_case function in PHP,
 CamelCase in C# or camelCase in Java) for strings.
