@@ -32,7 +32,8 @@ def tower_builder(n_floors):
     return floors
 
 
-"""Take 2 strings s1 and s2 including only letters from ato z. Return a new sorted string, the longest possible,
+"""Take 2 strings s1 and s2 including only letters from ato z. Return a new sorted string,
+the longest possible,
 containing distinct letters - each taken only once - coming from s1 or s2."""
 
 
@@ -53,13 +54,13 @@ find the sum of all the integers between including them too and return it.
 If the two numbers are equal return a or b."""
 
 
-def get_sum(a,b):
+def get_sum(a, b):
     if b > a:
-        c = [int(i) for i in range(a,b + 1)]
+        c = [int(i) for i in range(a, b + 1)]
         get_sum = sum(c)
         return get_sum
     elif a > b:
-        c = [int(i) for i in range(b,a + 1)]
+        c = [int(i) for i in range(b, a + 1)]
         get_sum = sum(c)
         return get_sum
     elif a == b:
