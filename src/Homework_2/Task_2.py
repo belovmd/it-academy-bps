@@ -6,8 +6,7 @@ len(list) - количество элементов в списке
 """
 
 
-# st = input('enter string: ').split()
-st = ("Верхняя строка не проходит через проверки CircleCI").split()
+st = input('enter string: ').split()
 count = 0
 for i in st:
     if len(i) > count:

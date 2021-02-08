@@ -6,7 +6,7 @@ Input: Цена одной вещи 3 рубля 20 копеек, посчита
 Output: Общая цена 9 рублей 60 копеек"""
 
 
-price_in_rubles = int(input("Enter price in rubles: "))
+price_in_rubles = int(input("Enter price in rubles:  "))
 price_in_cop = float(input("Enter price in cop: "))
 quantity_goods = int(input("Enter quantity of goods: "))
 total_price = (price_in_rubles + price_in_cop) * quantity_goods

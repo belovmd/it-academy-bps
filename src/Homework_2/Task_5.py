@@ -3,10 +3,17 @@
 циклические операторы и условные операторы. n - вводится"""
 
 
-# def fibonacci(n):
-#    if n in (1, 2):
-#        return 1
-#    return fibonacci(n - 1) + fibonacci(n - 2)
+fibona4i_1 = fibona4i_2 = 1
 
+num = int(input("Enter number of position: "))
 
-# print(fibonacci(5))
+if num < 2:
+    quit()
+
+print(fibona4i_1, end=' ')
+print(fibona4i_2, end=' ')
+for i in range(2, num):
+    fibona4i_1, fibona4i_2 = fibona4i_2, fibona4i_1 + fibona4i_2
+    print(fibona4i_2, end=' ')
+
+print()
