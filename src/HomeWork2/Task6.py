@@ -6,10 +6,10 @@
 
 
 def reverse_num(n, part=0):
-    if n == 0:
+    if not n:
         return part
     return reverse_num(n // 10, part * 10 + n % 10)
 
 
-number = 123454321
+number = 1232454321
 print("Num a Palindrome!") if reverse_num(number) == number else print("Num not a Palindrome!")
