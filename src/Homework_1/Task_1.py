@@ -9,6 +9,8 @@ def email_gen(list_of_names):
             letter += 1
         emails.append(i[1] + '.' + i[0][0:letter] + '@company.io')
     return emails
+
+
 strings = []
 f = open('D:\\AlexeiKarnauhov\\task_file.txt', 'r')
 for i in f:
@@ -19,9 +21,9 @@ n = 0
 for i in strings:
     list_of_names.append([])
     if i[0] == 'EMAIL' or len(i[3].replace(' ', '')) != 7 or ' \n' in i or len(i[1]) <= 1 or \
-            len(i[2]) <= 1 or i[3].replace(' ', '').isdigit() == False:
+            len(i[2]) <= 1 or i[3].replace(' ', '').isdigit() is False:
         list_of_names[n].append('no_email')
-        list_of_names[n].append('no_email'+str(n))
+        list_of_names[n].append('no_email' + str(n))
     else:
         list_of_names[n].append(i[1].replace(' ', ''))
         list_of_names[n].append(i[2].replace(' ', ''))
@@ -42,10 +44,10 @@ f.close()
 
 def binary_search(list, item):
     low = 0
-    high = len(list)-1
+    high = len(list) - 1
 
     while low <= high:
-        mid = (low+high)
+        mid = (low + high)
         guess = list[mid]
         if guess == item:
             return mid
