@@ -15,6 +15,6 @@ format_str = st_new.split()
 count = 0
 for i in format_str:
     if len(i) > count:
-         count = len(i)
-         word = i
+        count = len(i)
+        word = i
 print('the longest word is: ', word)
