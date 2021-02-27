@@ -1,4 +1,4 @@
-# 18 li
+# 18 lines: 8-Queens Problem (recursion)
 
 BOARD_SIZE = 8  # my next task first line
 
