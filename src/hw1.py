@@ -1,10 +1,9 @@
-# 20 lines: Prime numbers sieve w/fancy generators
+# 20 lines
 
 import itertools  # my next task first line
 
-
 def iter_primes():
-    # an iterator of all numbers between 2 and +infinity
+# an iterator of all numbers between 2 and +infinity
     numbers = itertools.count(2)
 
     # generate primes forever
