@@ -14,7 +14,7 @@ for has_chars, frags in groupby(lines, bool):
 # PRINTS:
 # This is the first paragraph.
 # This is the second.
-print('Hello, world!') # last line of previous task
+print('Hello, world!')  # last line of previous task
 
 
 # 4 lines: Fibonacci, tuple assignment
@@ -22,25 +22,26 @@ print('Hello, world!') # last line of previous task
 parents, babies = (1, 1) # my next task first line
 while babies < 100:
     print('This generation has {0} babies'.format(babies))
-    parents, babies = (babies, parents + babies) # last line of previous task
+    parents, babies = (babies, parents + babies)  # last line of previous task
 
 
 # 3 lines: For loop, built-in enumerate function, new style formatting
 
-friends = ['john', 'pat', 'gary', 'michael'] # my next task first line
+friends = ['john', 'pat', 'gary', 'michael']  # my next task first line
 for i, name in enumerate(friends):
-    print("iteration {iteration} is {name}".format(iteration=i, name=name)) # last line of previous task
+    print("iteration {iteration} is {name}".format(iteration=i, name=name))
+    # last line of previous task
 
 
 # 2 lines: Input, assignment
 
-name = input('What is your name?\n') # my next task first line
+name = input('What is your name?\n')  # my next task first line
 print('Hi, %s.' % name) # last line of previous task
 
 
 # 5 lines: Functions
 
-def greet(name): # my next task first lin
+def greet(name):  # my next task first lin
     print('Hello', name)
 
 greet('Jack')
