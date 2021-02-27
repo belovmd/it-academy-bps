@@ -2,6 +2,7 @@
 
 BOARD_SIZE = 8  # my next task first line
 
+
 def under_attack(col, queens):
     left = right = col
 
@@ -18,7 +19,7 @@ def solve(n):
 
     smaller_solutions = solve(n - 1)
 
-    return [solution+[(n,i+1)]
+    return [solution + [(n, i + 1)]
         for i in range(BOARD_SIZE)
             for solution in smaller_solutions
                 if not under_attack(i+1, solution)]
@@ -154,8 +155,10 @@ print("\n".join(". "*q + "Q " + ". "*(BOARD_SIZE - q - 1) for q in queens))
 class BankAccount(object):    # my next task first line
     def __init__(self, initial_balance=0):
         self.balance = initial_balance
+
     def deposit(self, amount):
         self.balance += amount
+
     def withdraw(self, amount):
         self.balance -= amount
     def overdrawn(self):
