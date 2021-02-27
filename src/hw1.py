@@ -1,8 +1,8 @@
-import itertools  # my next task first line
+    import itertools  # my next task first line
 
-def iter_primes():
 
-        # an iterator of all numbers between 2 and +infinity
+    def iter_primes():
+    # an iterator of all numbers between 2 and +infinity
     numbers = itertools.count(2)
 
     # generate primes forever
