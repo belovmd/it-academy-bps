@@ -1,13 +1,14 @@
+from itertools import groupby
+from time import localtime
 import csv
 import glob
 import itertools
-from itertools import groupby
 import random
 import re
 import sys
-from time import localtime
 import unittest
 import xml.etree.ElementTree as etree
+
 
 """# 1 lines: Output"""
 print('Hello, world!')
@@ -72,8 +73,8 @@ except ValueError:
 
 
 """# 9 lines:  Opening files"""
-# indent your Python code to put into an email
-# glob supports Unix style pathname extensions
+""" indent your Python code to put into an email
+   glob supports Unix style pathname extensions"""
 
 python_files = glob.glob('*.py')
 for file_name in sorted(python_files):
