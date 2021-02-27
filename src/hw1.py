@@ -1,26 +1,29 @@
-    import itertools  # my next task first line
+# 18 li
 
+BOARD_SIZE = 8  # my next task first line
 
-    def iter_primes():
-    # an iterator of all numbers between 2 and +infinity
-    numbers = itertools.count(2)
+def under_attack(col, queens):
+    left = right = col
 
-    # generate primes forever
-    while True:
-        # get the first number from the iterator (always a prime)
-        prime = next(numbers)
-        yield prime
+    for r, c in reversed(queens):
+        left, right = left - 1, right + 1
 
-        # this code iteratively builds up a chain of
-        # filters...slightly tricky, but ponder it a bit
-        numbers = filter(prime.__rmod__, numbers)
+        if c in (left, col, right):
+            return True
+    return False
 
+def solve(n):
+    if n == 0:
+        return [[]]
 
-for p in iter_primes():
-    if p > 1000:
-        break
+    smaller_solutions = solve(n - 1)
 
-     print (p)  # last line of previous task
+    return [solution+[(n,i+1)]
+        for i in range(BOARD_SIZE)
+            for solution in smaller_solutions
+                if not under_attack(i+1, solution)]
+for answer in solve(BOARD_SIZE):
+    print (answer)  # last line of previous task
 
 
 # 4 lines: Fibonacci, tuple assignment
