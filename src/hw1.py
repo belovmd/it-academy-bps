@@ -21,11 +21,13 @@ def solve(n):
     smaller_solutions = solve(n - 1)
 
     return [solution + [(n, i + 1)]
-        for i in range(BOARD_SIZE)
-            for solution in smaller_solutions
-                if not under_attack(i + 1, solution)]
+    for i in range(BOARD_SIZE)
+        for solution in smaller_solutions
+            if not under_attack(i + 1, solution)]
 for answer in solve(BOARD_SIZE):
-    print (answer)  # last line of previous task
+
+
+    print(answer)  # last line of previous task
 
 
 # 4 lines: Fibonacci, tuple assignment
@@ -167,4 +169,4 @@ class BankAccount(object):    # my next task first line
         return self.balance < 0
 my_account = BankAccount(15)
 my_account.withdraw(50)
-print (my_account.balance, my_account.overdrawn())  # last line of previous task
+print(my_account.balance, my_account.overdrawn())  # last line of previous task
