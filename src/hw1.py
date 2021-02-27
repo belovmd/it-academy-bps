@@ -1,3 +1,7 @@
+i# module level import
+
+import random
+
 # 15 lines: itertools
 
 from itertools import groupby
@@ -78,9 +82,7 @@ print('I owe the grocer $%.2f' % grocery_bill)  # last line of previous task
 
 # 33 lines: "Guess the Number" Game (edited) from
 
-import random  # my next task first lin
-
-guesses_made = 0
+guesses_made = 0 # my next task first line
 
 name = input('Hello! What is your name?\n')
 
