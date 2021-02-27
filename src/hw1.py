@@ -20,9 +20,8 @@ def solve(n):
 
     smaller_solutions = solve(n - 1)
 
-    return [solution + [(n, i + 1)]
-for i in range(BOARD_SIZE)
-    for solution in smaller_solutions
+    return [solution + [(n, i + 1)] for i in range(BOARD_SIZE),
+        for solution in smaller_solutions
         if not under_attack(i + 1, solution)]
 
 
@@ -95,7 +94,7 @@ guesses_made = 0  # my next task first line
 
 name = input('Hello! What is your name?\n')
 
-number = random.randint(1, 20)
+number = randint(1, 20)
 print('Well, {0}, I am thinking of a number between 1 and 20.'.format(name))
 
 while guesses_made < 6:
@@ -137,6 +136,7 @@ def validate(queens):
             raise BailOut
 
 def add_queen(queens):
+
     for i in range(BOARD_SIZE):
         test_queens = queens + [i]
         try:
@@ -148,6 +148,7 @@ def add_queen(queens):
         except BailOut:
             pass
     raise BailOut
+
 
 queens = add_queen([])
 print(queens)
