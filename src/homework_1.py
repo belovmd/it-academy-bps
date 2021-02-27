@@ -1,17 +1,14 @@
 # Output78
 print('Hello, world!')
 
-
 # Input, assignment
 name = input('What is your name?\n')
 print('Hi, %s.' % name)
-
 
 # For loop, built-in enumerate function, new style formatting
 friends = ['john', 'pat', 'gary', 'michael']
 for i, name in enumerate(friends):
     print("iteration {iteration} is {name}".format(iteration=i, name=name))
-
 
 # Fibonacci, tuple assignment
 parents, babies = (1, 1)
@@ -55,9 +52,9 @@ class BankAccount(object):
 
 # Doctest-based testing
 def median(pool):
-    """ Statistical median to demonstrate doctest.
-     median([2, 9, 9, 7, 9, 2, 4, 5, 8])
-    6 #change to 7 in order to pass the test"""
+    #   """ Statistical median to demonstrate doctest.
+    #    median([2, 9, 9, 7, 9, 2, 4, 5, 8])
+    #    #change to 7 in order to pass the test"""
     copy = sorted(pool)
     size = len(copy)
     if size % 2 == 1:
