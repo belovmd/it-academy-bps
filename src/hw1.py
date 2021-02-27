@@ -121,7 +121,7 @@ class BailOut(Exception):
 def validate(queens):
     left = right = col = queens[-1]
     for r in reversed(queens[:-1]):
-        left, right = left-1, right+1
+        left, right = left - 1, right + 1
         if r in (left, col, right):
             raise BailOut
 
@@ -139,11 +139,12 @@ def add_queen(queens):
     raise BailOut
 
 queens = add_queen([])
-print (queens)
-print ("\n".join(". "*q + "Q " + ". "*(BOARD_SIZE-q-1) for q in queens))  # last line of previous task
+print(queens)
+print("\n".join(". "*q + "Q " + ". "*(BOARD_SIZE - q - 1) for q in queens))
+# last line of previous task
 
 
-#20 lines: Prime numbers sieve w/fancy generators
+# 20 lines: Prime numbers sieve w/fancy generators
 
 import itertools  # my next task first line
 
@@ -151,8 +152,8 @@ def iter_primes():
      # an iterator of all numbers between 2 and +infinity
      numbers = itertools.count(2)
 
-     # generate primes forever
-     while True:
+    # generate primes forever
+    while True:
          # get the first number from the iterator (always a prime)
          prime = next(numbers)
          yield prime
