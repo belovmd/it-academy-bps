@@ -52,7 +52,7 @@ greet('Bob')  # last line of previous task
 
 # 11 lines: Triple-quoted strings, while loop
 
-REFRAIN = '''        
+REFRAIN = '''
     %d bottles of beer on the wall,
     %d bottles of beer,
     take one down, pass it around,
@@ -65,7 +65,7 @@ while bottles_of_beer > 1:
 bottles_of_beer -= 1  # last line of previous task
 
 
-#7 lines: Dictionaries, generator expressions
+# 7 lines: Dictionaries, generator expressions
 
 prices = {'apple': 0.40, 'banana': 0.50}  # my next task first line
 my_purchase = {
@@ -76,7 +76,7 @@ grocery_bill = sum(prices[fruit] * my_purchase[fruit]
 print('I owe the grocer $%.2f' % grocery_bill)  # last line of previous task
 
 
-#33 lines: "Guess the Number" Game (edited) from
+# 33 lines: "Guess the Number" Game (edited) from
 
 import random  # my next task first lin
 
@@ -84,8 +84,8 @@ guesses_made = 0
 
 name = input('Hello! What is your name?\n')
 
-number = random.randint (1, 20)
-print ('Well, {0}, I am thinking of a number between 1 and 20.'.format(name))
+number = random.randint(1, 20)
+print('Well, {0}, I am thinking of a number between 1 and 20.'.format(name))
 
 while guesses_made < 6:
 
@@ -94,24 +94,26 @@ while guesses_made < 6:
     guesses_made += 1
 
     if guess < number:
-        print ('Your guess is too low.')
+        print('Your guess is too low.')
 
     if guess > number:
-        print ('Your guess is too high.')
+        print('Your guess is too high.')
 
     if guess == number:
         break
 
 if guess == number:
-    print ('Good job, {0}! You guessed my number in {1} guesses!'.format(name, guesses_made))
+    print('Good job, {0}! You guessed my number in {1} guesses!'.format(name, guesses_made))
 else:
-    print ('Nope. The number I was thinking of was {0}'.format(number))  # last line of previous task
+    print('Nope. The number I was thinking of was {0}'.format(number))
+    # last line of previous task
 
 
 # 28 lines: 8-Queens Problem (define your own exceptions
 
 BOARD_SIZE = 8  # my next task first line
 class BailOut(Exception):
+
     pass
 
 def validate(queens):
