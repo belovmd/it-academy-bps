@@ -1,24 +1,26 @@
-i# module level import
+# 20 lines: Prime numbers sieve w/fancy generators
 
-import random
+import itertools  # my next task first line
 
-# 15 lines: itertools
+def iter_primes():
+     # an iterator of all numbers between 2 and +infinity
+      numbers = itertools.count(2)
 
-from itertools import groupby
+     # generate primes forever
+     while True:
+          # get the first number from the iterator (always a prime)
+          prime = next(numbers)
+          yield prime
 
-lines = '''
-    This is the first paragraph.
-    This is the second.
-    '''.splitlines()
-# Use itertools.groupby and bool to return groups of
-# consecutive lines that either have content or don't.
-for has_chars, frags in groupby(lines, bool):
-    if has_chars:
-        print(' '.join(frags))
-# PRINTS:
-# This is the first paragraph.
-# This is the second.
-print('Hello, world!')  # last line of previous task
+          # this code iteratively builds up a chain of
+          # filters...slightly tricky, but ponder it a bit
+          numbers = filter(prime.__rmod__, numbers)
+
+for p in iter_primes():
+    if p > 1000:
+        break
+
+     print (p)  # last line of previous task
 
 
 # 4 lines: Fibonacci, tuple assignment
@@ -144,26 +146,17 @@ print("\n".join(". "*q + "Q " + ". "*(BOARD_SIZE - q - 1) for q in queens))
 # last line of previous task
 
 
-# 20 lines: Prime numbers sieve w/fancy generators
+# 12 lines: Classes
 
-import itertools  # my next task first line
-
-def iter_primes():
-     # an iterator of all numbers between 2 and +infinity
-     numbers = itertools.count(2)
-
-    # generate primes forever
-    while True:
-         # get the first number from the iterator (always a prime)
-         prime = next(numbers)
-         yield prime
-
-         # this code iteratively builds up a chain of
-         # filters...slightly tricky, but ponder it a bit
-         numbers = filter(prime.__rmod__, numbers)
-
-for p in iter_primes():
-    if p > 1000:
-        break
-
-    print (p)  # last line of previous task
+class BankAccount(object):    # my next task first line
+    def __init__(self, initial_balance=0):
+        self.balance = initial_balance
+    def deposit(self, amount):
+        self.balance += amount
+    def withdraw(self, amount):
+        self.balance -= amount
+    def overdrawn(self):
+        return self.balance < 0
+my_account = BankAccount(15)
+my_account.withdraw(50)
+print (my_account.balance, my_account.overdrawn())  # last line of previous task
