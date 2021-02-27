@@ -13,6 +13,7 @@ def under_attack(col, queens):
             return True
     return False
 
+
 def solve(n):
     if n == 0:
         return [[]]
@@ -22,7 +23,7 @@ def solve(n):
     return [solution + [(n, i + 1)]
         for i in range(BOARD_SIZE)
             for solution in smaller_solutions
-                if not under_attack(i+1, solution)]
+                if not under_attack(i + 1, solution)]
 for answer in solve(BOARD_SIZE):
     print (answer)  # last line of previous task
 
@@ -88,7 +89,7 @@ print('I owe the grocer $%.2f' % grocery_bill)  # last line of previous task
 
 # 33 lines: "Guess the Number" Game (edited) from
 
-guesses_made = 0 # my next task first line
+guesses_made = 0  # my next task first line
 
 name = input('Hello! What is your name?\n')
 
@@ -121,6 +122,7 @@ else:
 
 BOARD_SIZE = 8  # my next task first line
 class BailOut(Exception):
+
 
     pass
 
