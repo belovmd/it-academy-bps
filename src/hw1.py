@@ -20,9 +20,10 @@ def solve(n):
 
     smaller_solutions = solve(n - 1)
 
-    return [solution + [(n, i + 1)] for i in range(BOARD_SIZE),
-        for solution in smaller_solutions
-        if not under_attack(i + 1, solution)]
+    return [solution + [(n, i + 1)]
+        for i in range(BOARD_SIZE)
+            for solution in smaller_solutions
+            if not under_attack(i + 1, solution)]
 
 
 for answer in solve(BOARD_SIZE):
@@ -135,6 +136,7 @@ def validate(queens):
         if r in (left, col, right):
             raise BailOut
 
+
 def add_queen(queens):
 
     for i in range(BOARD_SIZE):
@@ -165,10 +167,14 @@ class BankAccount(object):    # my next task first line
     def deposit(self, amount):
         self.balance += amount
 
+
     def withdraw(self, amount):
         self.balance -= amount
+
+
     def overdrawn(self):
         return self.balance < 0
 my_account = BankAccount(15)
 my_account.withdraw(50)
 print(my_account.balance, my_account.overdrawn())  # last line of previous task
+
