@@ -21,9 +21,9 @@ def solve(n):
     smaller_solutions = solve(n - 1)
 
     return [solution + [(n, i + 1)]
-           for i in range(BOARD_SIZE)
-               for solution in smaller_solutions
-                   if not under_attack(i + 1, solution)]
+for i in range(BOARD_SIZE)
+    for solution in smaller_solutions
+        if not under_attack(i + 1, solution)]
 
 
 for answer in solve(BOARD_SIZE):
@@ -123,10 +123,11 @@ else:
 # 28 lines: 8-Queens Problem (define your own exceptions
 
 BOARD_SIZE = 8  # my next task first line
+
+
 class BailOut(Exception):
-
-
     pass
+
 
 def validate(queens):
     left = right = col = queens[-1]
@@ -150,7 +151,7 @@ def add_queen(queens):
 
 queens = add_queen([])
 print(queens)
-print("\n".join(". "*q + "Q " + ". "*(BOARD_SIZE - q - 1) for q in queens))
+print("\n".join(". " * q + "Q " + ". " * (BOARD_SIZE - q - 1) for q in queens))
 # last line of previous task
 
 
