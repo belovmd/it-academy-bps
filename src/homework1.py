@@ -167,10 +167,6 @@ if __name__ == '__main__':
 
 
 def median1(pool):
-
-    """Statistical median to demonstrate doctest.
-       6 #change to 7 in order to pass the test """
-
     copy = sorted(pool)
     size = len(copy)
     if size % 2 == 1:
