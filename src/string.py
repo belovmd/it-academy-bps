@@ -5,7 +5,7 @@ print(other == str2)
 print(str2)
 
 sent = 'my school gjgjjgjgjgjjgjgjg ggg fdxsdf hjj hh'
-temp =''
+temp = ''
 list = sent.split(' ')
 for i in list:
     if len(i) > len(temp):
@@ -24,6 +24,3 @@ temp_l = list_ss[0]
 list_ss[0] = list_ss[1]
 list_ss[1] = temp_l
 print('/'.join(list_ss))
-
-
-
