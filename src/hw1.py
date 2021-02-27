@@ -19,7 +19,7 @@ print('Hello, world!')  # last line of previous task
 
 # 4 lines: Fibonacci, tuple assignment
 
-parents, babies = (1, 1) # my next task first line
+parents, babies = (1, 1)  # my next task first line
 while babies < 100:
     print('This generation has {0} babies'.format(babies))
     parents, babies = (babies, parents + babies)  # last line of previous task
@@ -36,7 +36,7 @@ for i, name in enumerate(friends):
 # 2 lines: Input, assignment
 
 name = input('What is your name?\n')  # my next task first line
-print('Hi, %s.' % name) # last line of previous task
+print('Hi, %s.' % name)  # last line of previous task
 
 
 # 5 lines: Functions
@@ -44,9 +44,10 @@ print('Hi, %s.' % name) # last line of previous task
 def greet(name):  # my next task first lin
     print('Hello', name)
 
+
 greet('Jack')
 greet('Jill')
-greet('Bob') # last line of previous task
+greet('Bob')  # last line of previous task
 
 
 # 11 lines: Triple-quoted strings, while loop
@@ -56,34 +57,34 @@ REFRAIN = '''
     %d bottles of beer,
     take one down, pass it around,
     %d bottles of beer on the wall!
-    ''' # my next task first lin
+    '''  # my next task first lin
 bottles_of_beer = 9
 while bottles_of_beer > 1:
     print(REFRAIN % (bottles_of_beer, bottles_of_beer,
                      bottles_of_beer - 1))
-bottles_of_beer -= 1 # last line of previous task
+bottles_of_beer -= 1  # last line of previous task
 
 
 #7 lines: Dictionaries, generator expressions
 
-prices = {'apple': 0.40, 'banana': 0.50} # my next task first line
+prices = {'apple': 0.40, 'banana': 0.50}  # my next task first line
 my_purchase = {
     'apple': 1,
     'banana': 6}
 grocery_bill = sum(prices[fruit] * my_purchase[fruit]
                    for fruit in my_purchase)
-print('I owe the grocer $%.2f' % grocery_bill) # last line of previous task
+print('I owe the grocer $%.2f' % grocery_bill)  # last line of previous task
 
 
 #33 lines: "Guess the Number" Game (edited) from
 
-import random # my next task first lin
+import random  # my next task first lin
 
 guesses_made = 0
 
 name = input('Hello! What is your name?\n')
 
-number = random.randint(1, 20)
+number = random.randint (1, 20)
 print ('Well, {0}, I am thinking of a number between 1 and 20.'.format(name))
 
 while guesses_made < 6:
@@ -104,12 +105,12 @@ while guesses_made < 6:
 if guess == number:
     print ('Good job, {0}! You guessed my number in {1} guesses!'.format(name, guesses_made))
 else:
-    print ('Nope. The number I was thinking of was {0}'.format(number)) # last line of previous task
+    print ('Nope. The number I was thinking of was {0}'.format(number))  # last line of previous task
 
 
 # 28 lines: 8-Queens Problem (define your own exceptions
 
-BOARD_SIZE = 8 # my next task first line
+BOARD_SIZE = 8  # my next task first line
 class BailOut(Exception):
     pass
 
@@ -135,12 +136,12 @@ def add_queen(queens):
 
 queens = add_queen([])
 print (queens)
-print ("\n".join(". "*q + "Q " + ". "*(BOARD_SIZE-q-1) for q in queens)) # last line of previous task
+print ("\n".join(". "*q + "Q " + ". "*(BOARD_SIZE-q-1) for q in queens))  # last line of previous task
 
 
 #20 lines: Prime numbers sieve w/fancy generators
 
-import itertools # my next task first line
+import itertools  # my next task first line
 
 def iter_primes():
      # an iterator of all numbers between 2 and +infinity
@@ -159,4 +160,5 @@ def iter_primes():
 for p in iter_primes():
     if p > 1000:
         break
-    print (p) # last line of previous task
+
+    print (p)  # last line of previous task
