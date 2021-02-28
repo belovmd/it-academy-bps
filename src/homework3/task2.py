@@ -1,3 +1,4 @@
+import copy
 """# 2 task:  List practice"""
 
 """# paragraph 1:  generator of list"""
@@ -23,7 +24,6 @@ print(list4)
 
 """# paragraph 5:  copy and append """
 
-import copy
 list5 = copy.deepcopy(list4)
 list5.append('2a')
 print('list4 =', list4, 'newlist =', list5)

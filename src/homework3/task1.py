@@ -9,8 +9,3 @@ for i in range(1, 100):
         print('Buzz')
     else:
         print(i)
-
-
-
-
-
