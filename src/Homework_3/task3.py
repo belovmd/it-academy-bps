@@ -16,4 +16,4 @@ if len(tpl_2) == 1:
         y = 0
         while y <= len(i) - 1:
             y += 1
-            print(y, end = ' ')
+            print(y, end=' ')
