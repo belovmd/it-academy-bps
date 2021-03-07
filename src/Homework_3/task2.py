@@ -13,9 +13,9 @@ list_2 = list[0:6:2]
 print("list_2 = ", list_2)
 list_3 = [a + b for a in '1234' for b in 'a']
 print("list_3 = ", list_3)
-del list_3[1]    '#print(list_3.remove('2a')) - не работает'
+del list_3[1]
 print("list_3 (delete '2a') = ", list_3)
 list_4 = copy.deepcopy(list_3)
 print("list_4 = ", list_4)
-list_5 = list_4.append('2a')    '# выводит None'
+list_5 = list_4.append('2a')
 print(list_5)
