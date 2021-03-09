@@ -17,5 +17,6 @@ del list_3[1]
 print("list_3 (delete '2a') = ", list_3)
 list_4 = copy.deepcopy(list_3)
 print("list_4 = ", list_4)
-list_5 = list_4.append('2a')
-print(list_5)
+list_4.append('2a')
+list_5 = list_4
+print("list_5 = ", list_5)
