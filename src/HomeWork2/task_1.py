@@ -4,7 +4,6 @@
 Пример:
 Input: Цена одной вещи 3 рубля 20 копеек, посчитать 3 предмета.
 Output: Общая цена 9 рублей 60 копеек """
-import re
 
 
 def output_amount(list_nums):  # for V_1, V_2 DRY
