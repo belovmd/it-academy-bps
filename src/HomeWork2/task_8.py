@@ -16,7 +16,7 @@ we can treat the interval as [1, 5], which has a length of 4."""
 def sum_of_intervals(intervals):
     list_in = []
     for x in intervals:
-        for y in range(x[0], max(x)):
+        for y in range(x[0], max(x)):  # max элемент всего списка, как крайний, на сколько помню
             if [y, y + 1] not in list_in:
                 list_in.append([y, y + 1])
     return len(list_in)

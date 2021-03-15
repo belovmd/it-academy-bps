@@ -15,22 +15,7 @@ def output_amount(list_nums):  # for V_1, V_2 DRY
         print('Incorrect Input')
 
 
-# V_1 if space between words
 str_input = input("Input:")
 word_list = str_input.split()
 num_list = [int(num) for num in filter(lambda num: num.isnumeric(), word_list)]
 output_amount(num_list)
-
-# V_2
-str_input = input("Input:")
-str_nums = re.findall(r'\d+', str_input)
-str_nums = [int(i) for i in str_nums]
-output_amount(str_nums)
-
-# V_3
-price_rub = int(input('Price Rub:'))
-price_kop = int(input('Price Kop:'))
-count_product = int(input('Count Product:'))
-print('Amount to pay = {}'.format(price_rub * count_product + price_kop / 100 * count_product))
-amount = price_rub * count_product + price_kop / 100 * count_product
-print('Amount to pay = {} Rub. {} Kop'.format(int(amount // 1), int(amount % 1 * 100)))
