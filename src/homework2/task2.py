@@ -1,6 +1,6 @@
 """# 2 task: Найти самое длинное слово в введенном предложении """
-import string
 import re
+import string
 
 my_string = "vjvj. dhпрпррпрпрпрdh, ghhg djdjd?jdjdjdj"
 mas = re.split(' ', my_string)
