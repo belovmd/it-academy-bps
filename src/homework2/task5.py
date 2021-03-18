@@ -1,3 +1,4 @@
+"""# 5 task: Выведите n-ое число Фибоначчи """
 num_fibo = int(input('enter number'))
 preprev = 0
 prev = 1

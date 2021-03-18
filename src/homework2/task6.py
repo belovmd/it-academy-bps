@@ -1,3 +1,4 @@
+"""# 6 task: Определите, является ли число палиндромом  """
 palindrom = 1221
 is_palindrom = palindrom
 rever = 0
