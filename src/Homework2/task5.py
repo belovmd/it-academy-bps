@@ -12,5 +12,5 @@ elif n == 1:
     print(a)
 else:
     for i in range(int(n - 2)):
-        a, b = b, a+b
+        a, b = b, a + b
     print('элемент последовательности равен ', b)
