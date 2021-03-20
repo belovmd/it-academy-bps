@@ -1,0 +1,1 @@
+"""# 7 task:  2 numbers by  algorithm Euclid """
