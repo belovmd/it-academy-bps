@@ -13,6 +13,7 @@ print(result_list)
 result_list = [item for item in result_list if item != '2a']
 print(result_list)
 
-"""Скопируйте список и добавьте в него элемент '2a' так чтобы в исходном списке этого элемента не было."""
+"""Скопируйте список и добавьте в него элемент '2a'
+так чтобы в исходном списке этого элемента не было."""
 result_list = list(result_list[:2]) + ['2a'] + list(result_list[3:])
 print(result_list)
