@@ -5,7 +5,7 @@
 разделенная пробелами. Выходные данные - количество пар.
 Важно: 1 1 1 - это 3 пары, 1 1 1 1 - это 6 пар"""
 
-str_num = '4 1 77 22 22 22 22 1'
+str_num = '8 1 6 44 16 44 22 18 44'
 str_temp = str_num.split(' ')
 num = []
 total = 0
@@ -21,4 +21,3 @@ for c in range(len(num)):
             if next_element == current_element:
                 total += 1
         print(total)
-        

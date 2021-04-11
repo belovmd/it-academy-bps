@@ -1,5 +1,7 @@
 """List practice"""
+
 import copy as copy
+
 """1. Используйте генератор списков чтобы получить следующий: ['ab', 'ac',
 'ad', 'bb', 'bc', 'bd']"""
 lst = [i + j for i in 'ab' for j in 'bcd']
@@ -20,6 +22,5 @@ print(lst.pop(1))
 исходном списке этого элемента не было"""
 lsst = copy.copy(lst)
 lsst.insert(1, '2a')
-
 print(lsst)
 print(lst)
