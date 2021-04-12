@@ -18,4 +18,3 @@ for i in range(len(list_num)):
                 list_num[j] = temp
                 current_null_index = j
             print(list_num)
-            
