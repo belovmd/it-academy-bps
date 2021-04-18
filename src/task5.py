@@ -8,5 +8,4 @@ uniq_lg = set(lst_lg)
 for key in dict:
     for value in dict[key]:
         uniq_lg = set(uniq_lg) & set(value)
-        print(uniq_lg, set(value))
 print("Кол-во языков {} языки {}".format(len(uniq_lg), uniq_lg))
