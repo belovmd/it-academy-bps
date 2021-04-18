@@ -8,11 +8,11 @@ print(result_list)
 print(result_list[::2])
 
 """3.Используйте генератор списков чтобы получить следующий ['1a', '2a', '3a', '4a']"""
-result_list = [str(item_frst) + item_secd for item_frst in range(1, 5) for item_secd in ['a']]
+result_list = [i_f + i_s for i_f in '12345' for i_s in 'a']
 print(result_list)
 
 """4.Одной строкой удалите элемент  '2a' из прошлого списка и напечатайте его."""
-result_list = [item for item in result_list if item != '2a']
+result_list = [i_f + i_s for i_f in '12345' for i_s in 'a' if (i_f + i_s) != '2a']
 print(result_list)
 
 """5.Скопируйте список и добавьте в него элемент '2a'
