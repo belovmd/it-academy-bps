@@ -5,8 +5,8 @@
 list_num = list('1234324567')
 uniq_num = []
 for num in list_num:
-        if num in uniq_num:
-            continue
-        else:
-            uniq_num.append(num)
+    if num in uniq_num:
+        continue
+    else:
+        uniq_num.append(num)
 print(uniq_num)
