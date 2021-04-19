@@ -12,5 +12,3 @@ def print_str(str):
 
 runn_all = runner(print_str)
 runn_all("Demons")
-
-
