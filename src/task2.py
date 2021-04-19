@@ -1,5 +1,6 @@
 def runner(func_deco):
     count_run = 0
+
     def wrapper():
         print("SpaceShip")
         nonlocal count_run
@@ -7,6 +8,7 @@ def runner(func_deco):
         func_deco()
         print("moon")
         return count_run
+
     return wrapper
 
 
