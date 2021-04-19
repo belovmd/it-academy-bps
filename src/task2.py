@@ -1,14 +1,21 @@
 def runner(func_deco):
-    def wa_original_function(*args):
+    count_run = 0
+    def wrapper():
         print("SpaceShip")
-        func_deco(*args)
+        nonlocal count_run
+        count_run += 1
+        func_deco()
         print("moon")
-    return wa_original_function
+        return count_run
+    return wrapper
 
 
-def print_str(str):
-    print(str)
+def print_str():
+    print("some func")
 
 
 runn_all = runner(print_str)
-runn_all("Demons")
+print(runn_all())
+print(runn_all())
+print(runn_all())
+print(runn_all())
