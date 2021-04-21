@@ -3,6 +3,6 @@
 
 input_x = 324
 rez = 1 << 30
-while input_x < rez:  # Не очень уверен в правильности , работает при x >= 2
+while input_x < rez:
     rez >>= 1
 print("Наим.Ст2 от {} = {}".format(input_x, rez))
